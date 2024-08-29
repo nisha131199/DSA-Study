@@ -11,3 +11,8 @@
    - Rotation BS
    - Splitting into `m` sub arrays
    - Target in matrix
+2. Sorting
+   - Bubble Sort
+   - Selection Sort
+   - Insertion Sort
+   - Cyclic Sort
