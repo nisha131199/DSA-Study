@@ -16,3 +16,10 @@
    - Selection Sort
    - Insertion Sort
    - Cyclic Sort
+3. Patterns
+   - increase to decrease pattern
+   - decrease to increase pattern
+   - prism
+   - square
+4. Recursion
+   - 
