@@ -44,12 +44,18 @@ public class CyclicSort {
                     swap(arr, i, correctPos);
                 } else {
                     i++;
-                    list.add(i);
                 }
             } else {
                 i++;
             }
         }
+
+        for (int j = 0; j < arr.length; j++) {
+            if (arr[j] != j+1) {
+                list.add(j+1);
+            }
+        }
+
         return list;
     }
 
