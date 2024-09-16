@@ -1,6 +1,6 @@
 package recursion;
 
-public class LoopToRecursion {
+public class Looping {
     public static void main(String[] args) {
         print(5);
         System.out.println();
