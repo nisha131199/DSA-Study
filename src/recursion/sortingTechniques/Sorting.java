@@ -1,4 +1,4 @@
-package recursion;
+package recursion.sortingTechniques;
 
 import java.util.Arrays;
 
@@ -41,7 +41,9 @@ public class Sorting {
             }
             return selectionSort(arr, ++s, e, temp);
         } else {
-            swap(arr, temp, e);
+            if (temp < e) { // todo: if highest item not already in its correct position
+                swap(arr, temp, e);
+            }
             return selectionSort(arr, 0, --e, 0);
         }
     }

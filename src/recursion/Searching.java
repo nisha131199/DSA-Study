@@ -32,13 +32,13 @@ public class Searching {
             return mid;
         }
         if (arr[s] <= arr[mid]) {
-            if (arr[s] <= target && arr[mid] >= target) {
+            if (arr[s] <= target && arr[mid] > target) {
                 return findTargetInRotatedArray(arr, target, s, mid - 1);
             } else {
                 return findTargetInRotatedArray(arr, target, mid + 1, e);
             }
         }
-        if (arr[mid] <= target && target <= arr[e]) {
+        if (arr[mid] < target && target <= arr[e]) {
             return findTargetInRotatedArray(arr, target, mid + 1, e);
         } else {
             return findTargetInRotatedArray(arr, target, s, mid - 1);
@@ -56,6 +56,7 @@ public class Searching {
 
     /**
      * todo: finding target & returning its position
+     *  linear searching for target item index's
      * */
     static ArrayList<Integer> findingTargetIndexes(int[] arr, int target, int index, ArrayList<Integer> nums) {
         if (index == arr.length) return nums;
