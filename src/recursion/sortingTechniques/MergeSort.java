@@ -5,11 +5,54 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] arr = {4,1,63,2,7,8,5};
-
-        int[] answer = mergeSort(arr);
+        int[] arr = {4,1,63,2,7,5,8};
+        mergeInPlace(arr, 0, arr.length);
         System.out.println(Arrays.toString(arr));
-        System.out.println(Arrays.toString(answer));
+
+//        int[] answer = mergeSort(arr);
+//        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(answer));
+    }
+
+    static void mergeInPlace(int[] arr, int s, int e) {
+        if (e - s == 1) return;
+
+        int mid = (e + s)/2;
+        mergeInPlace(arr, s, mid);
+        mergeInPlace(arr, mid, e);
+
+        mergerInPlace(arr, s, mid, e);
+    }
+
+    private static void mergerInPlace(int[] arr, int s, int mid, int e) {
+        int i = s, j = mid, k = 0;
+        int[] result = new int[e - s];
+
+        while (i < mid && j < e) {
+            if (arr[i] < arr[j]) {
+                result[k] = arr[i];
+                i++;
+            } else {
+                result[k] = arr[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i < mid) {
+            result[k] = arr[i];
+            i++;
+            k++;
+        }
+        while (j < e) {
+            result[k] = arr[j];
+            j++;
+            k++;
+        }
+
+        for (int l = 0; l < result.length; l++) {
+            arr[s+l] = result[l];
+        }
     }
 
     /**
