@@ -115,14 +115,9 @@ Cons : Repeated functions being called here, takes much time
 
 #### 2. Divide & conquer recurrence relation: Binary search because it gets reduce by a factor
 
-
-
-
-
-
-
-
-
+#### 3. Sorting techniques with recursion
+#### 4. Subsets
+#### 5. Maze problems
 
 
 
