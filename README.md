@@ -120,4 +120,5 @@ Cons : Repeated functions being called here, takes much time
 #### 5. Maze problems
 
 
-
+### Linked List
+Non-contiguous memory allocation
