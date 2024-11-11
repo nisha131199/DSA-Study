@@ -7,6 +7,7 @@
 3. String
 4. Patterns
 5. Recursion
+6. Linked List
 ```
 
 
